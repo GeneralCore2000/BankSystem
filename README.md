@@ -3,6 +3,8 @@
 
 **Date Started**: 11/04/2024
 
+**Deadline**: 12/02/2024
+
 Final group project for 1st Year, 1st Semester at Bulacan State University
 
 Create a simple CLI bank system that:

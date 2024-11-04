@@ -1,10 +1,12 @@
 package com.mycompany.banksystem;
+
 import java.util.Scanner;
 
 public class BankSystem {
-    static double balance = 0.0; // static variable for balance
 
-    public static void main(String[] args) {
+    double balance = 0.0; // static variable for balance
+
+    public BankSystem() {
         Scanner scanner = new Scanner(System.in);
         int option = 0;
 
@@ -37,11 +39,11 @@ public class BankSystem {
         scanner.close();
     }
 
-    private static void checkBalance() {
+    private void checkBalance() {
         System.out.println("Your current balance is ₱" + balance);
     }
 
-    private static void deposit(Scanner scanner) {
+    private void deposit(Scanner scanner) {
         System.out.print("Enter the amount to deposit: ");
         double amount = scanner.nextDouble();
 
@@ -54,7 +56,7 @@ public class BankSystem {
         }
     }
 
-    private static void withdraw(Scanner scanner) {
+    private void withdraw(Scanner scanner) {
         System.out.print("Enter the amount to withdraw: ");
         double amount = scanner.nextDouble();
 
@@ -69,7 +71,11 @@ public class BankSystem {
         }
     }
 
-    private static void exit() {
+    private void exit() {
         System.out.println("Thank you for banking with us. Have a great day!");
+    }
+
+    public static void main(String[] args) {
+        new BankSystem();
     }
 }

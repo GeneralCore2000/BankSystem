@@ -9,4 +9,5 @@ Create a simple CLI bank system that:
 - [x] Check user's balance
 - [x] User's ability to depost
 - [x] User's ability to withdraw
+- [ ] Transfer Money between accounts
       

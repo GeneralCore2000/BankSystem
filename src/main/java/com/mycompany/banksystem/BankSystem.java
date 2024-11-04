@@ -4,36 +4,23 @@ import java.util.Scanner;
 
 public class BankSystem {
 
-    double balance = 0.0; // static variable for balance
+    double balance = 0.0;
 
     public BankSystem() {
         Scanner scanner = new Scanner(System.in);
         int option = 0;
 
         while (option != 4) {
-            System.out.println("Hello World");
-            System.out.println("1. Check Balance");
-            System.out.println("2. Deposit");
-            System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
-            System.out.print("Enter an option: ");
+            System.out.println("1. Check Balance\n2. Deposit\n3. Withdraw\n 4. Exit");
+            System.out.print("Enter an option >>: ");
             option = scanner.nextInt();
 
             switch (option) {
-                case 1:
-                    checkBalance();
-                    break;
-                case 2:
-                    deposit(scanner);
-                    break;
-                case 3:
-                    withdraw(scanner);
-                    break;
-                case 4:
-                    exit();
-                    break;
-                default:
-                    System.out.println("Invalid option. Try again.");
+                case 1 -> checkBalance();
+                case 2 -> deposit(scanner);
+                case 3 -> withdraw(scanner);
+                case 4 -> exit();
+                default -> System.out.println("Invalid option. Try again.");
             }
         }
         scanner.close();

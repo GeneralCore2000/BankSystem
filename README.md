@@ -9,7 +9,7 @@ Final group project for 1st Year, 1st Semester at Bulacan State University
 
 Create a simple CLI bank system that:
 - [x] Check user's balance
-- [x] User's ability to deposit
-- [x] User's ability to withdraw
+- [x] Deposit to user's account
+- [x] Withdraw from user's account
 - [ ] Transfer money between accounts
       

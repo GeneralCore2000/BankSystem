@@ -7,7 +7,9 @@
 
 Final group project for 1st Year, 1st Semester at Bulacan State University
 
-Create a simple CLI bank system that:
+## CLI Bank System Requirements:
+- [ ] Create Bank Account
+- [ ] Save Accounts to Files
 - [ ] Check user's balance
 - [ ] Deposit to user's account
 - [ ] Withdraw from user's account

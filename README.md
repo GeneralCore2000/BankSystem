@@ -5,8 +5,6 @@
 
 **Deadline**: 12/09/2024
 
-Final group project for 1st Year, 1st Semester at Bulacan State University
-
 ## CLI Bank System Requirements:
 - [ ] Create Bank Account
 - [ ] Save Accounts to Files

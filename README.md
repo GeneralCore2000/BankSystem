@@ -8,8 +8,8 @@
 ## CLI Bank System Requirements:
 - [ ] Create Bank Account
 - [ ] Save Accounts to Files
-- [ ] Check user's balance
-- [ ] Deposit to user's account
-- [ ] Withdraw from user's account
-- [ ] Transfer money between accounts
+- [ ] Check balance
+- [ ] Deposit
+- [ ] Withdraw
+- [ ] Transfer money
       

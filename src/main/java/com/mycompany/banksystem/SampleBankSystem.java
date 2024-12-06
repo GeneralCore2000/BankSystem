@@ -62,7 +62,4 @@ public class SampleBankSystem {
         System.out.println("Thank you for banking with us. Have a great day!");
     }
 
-    public static void main(String[] args) {
-        new SampleBankSystem();
-    }
 }

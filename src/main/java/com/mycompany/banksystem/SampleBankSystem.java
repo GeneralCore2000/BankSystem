@@ -2,11 +2,11 @@ package com.mycompany.banksystem;
 
 import java.util.Scanner;
 
-public class BankSystem {
+public class SampleBankSystem {
 
     double balance = 0.0;
 
-    public BankSystem() {
+    public SampleBankSystem() {
         Scanner scanner = new Scanner(System.in);
         int option = 0;
 
@@ -63,6 +63,6 @@ public class BankSystem {
     }
 
     public static void main(String[] args) {
-        new BankSystem();
+        new SampleBankSystem();
     }
 }

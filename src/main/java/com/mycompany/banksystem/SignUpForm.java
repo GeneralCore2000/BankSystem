@@ -111,7 +111,7 @@ public class SignUpForm extends javax.swing.JFrame {
         signUpPanel.add(pinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 280, 40));
 
         registerButtonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/signup/register_button_v2.png"))); // NOI18N
-        signUpPanel.add(registerButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 440, -1, -1));
+        signUpPanel.add(registerButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
 
         signInLabel.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
         signInLabel.setForeground(new java.awt.Color(255, 233, 180));
@@ -121,7 +121,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 signInLabelMouseClicked(evt);
             }
         });
-        signUpPanel.add(signInLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 520, -1, -1));
+        signUpPanel.add(signInLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/signup/signup_logo.png"))); // NOI18N
         signUpPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));

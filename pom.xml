@@ -10,4 +10,13 @@
         <maven.compiler.release>23</maven.compiler.release>
         <exec.mainClass>com.mycompany.banksystem.BankSystem</exec.mainClass>
     </properties>
+    <build>
+</build>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE230</version>
+        </dependency>
+    </dependencies>
 </project>

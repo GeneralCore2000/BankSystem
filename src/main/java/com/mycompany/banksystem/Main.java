@@ -131,6 +131,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         SignUpForm signUpForm = new SignUpForm();
         signUpForm.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_signUpLabelMouseClicked
 
     public static void main(String args[]) {

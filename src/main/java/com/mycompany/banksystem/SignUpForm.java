@@ -23,6 +23,7 @@ public class SignUpForm extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,6 +136,7 @@ public class SignUpForm extends javax.swing.JFrame {
         getContentPane().add(signUpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 570));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void accNumFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accNumFieldFocusGained

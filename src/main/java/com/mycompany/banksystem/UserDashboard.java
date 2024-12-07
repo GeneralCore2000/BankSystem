@@ -101,9 +101,19 @@ public class UserDashboard extends javax.swing.JFrame {
         dashboardPanel.add(accBgBalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         withdrawLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Add Deposit Logo.png"))); // NOI18N
+        withdrawLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                withdrawLogoLabelMouseClicked(evt);
+            }
+        });
         dashboardPanel.add(withdrawLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
 
         transferLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Transfer money logo.png"))); // NOI18N
+        transferLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transferLogoLabelMouseClicked(evt);
+            }
+        });
         dashboardPanel.add(transferLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         depositLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Send money logo.png"))); // NOI18N
@@ -126,12 +136,22 @@ public class UserDashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-
     private void depositLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositLogoLabelMouseClicked
         DepositMoney dm = new DepositMoney();
         dm.setVisible(true);
         dm.setUserName(getNameLabel());
     }//GEN-LAST:event_depositLogoLabelMouseClicked
+
+    private void transferLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transferLogoLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transferLogoLabelMouseClicked
+
+    private void withdrawLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawLogoLabelMouseClicked
+        // TODO add your handling code here:
+        WithdrawMoney wm = new WithdrawMoney();
+        wm.setVisible(true);
+        wm.setUserName(getNameLabel());
+    }//GEN-LAST:event_withdrawLogoLabelMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accBgBalLabel;

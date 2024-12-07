@@ -1,5 +1,8 @@
 package com.mycompany.banksystem;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class SignUpForm extends javax.swing.JFrame {
@@ -195,7 +198,7 @@ public class SignUpForm extends javax.swing.JFrame {
 
     private void registerButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerButtonLabelMousePressed
         // TODO add your handling code here:
-        SaveUser su = new SaveUser(
+        SaveUser(
                 lNameField.getText(),
                 fNameField.getText(),
                 generateAccountNumber(),
@@ -210,8 +213,20 @@ public class SignUpForm extends javax.swing.JFrame {
         Main main = new Main();
         main.setVisible(true);
         setVisible(false);
-
     }//GEN-LAST:event_registerButtonLabelMousePressed
+    
+    public void SaveUser(String fName, String lName, String accNum, int pin, double initDep) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt", true))) {
+            writer.write(
+                    fName + " " + lName + ","
+                    + pin + ","
+                    + accNum + ","
+                    + initDep);
+            writer.newLine();
+        } catch (IOException e) {
+            System.out.println("Error saving user data.");
+        }
+    }
 
     public String generateAccountNumber() {
         long accNum = (long) (1_000_000_000L + Math.random() * 9_000_000_000L);

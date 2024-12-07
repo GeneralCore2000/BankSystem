@@ -16,8 +16,16 @@ public class UserDashboard extends javax.swing.JFrame {
         this.nameLabel.setText(nameLabel);
     }
 
+    public String getNameLabel() {
+        return nameLabel.getText();
+    }
+
     public void setBalLabel(String balLabel) {
         this.balLabel.setText(balLabel);
+    }
+
+    public double getBalLabel() {
+        return Double.parseDouble(balLabel.getText());
     }
 
     @SuppressWarnings("unchecked")
@@ -76,7 +84,7 @@ public class UserDashboard extends javax.swing.JFrame {
 
         balLabel.setFont(new java.awt.Font("SansSerif", 1, 43)); // NOI18N
         balLabel.setForeground(new java.awt.Color(255, 255, 255));
-        balLabel.setText("12345.00");
+        balLabel.setText("{balance}");
         dashboardPanel.add(balLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
 
         phpLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -99,6 +107,11 @@ public class UserDashboard extends javax.swing.JFrame {
         dashboardPanel.add(transferLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         depositLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Send money logo.png"))); // NOI18N
+        depositLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                depositLogoLabelMouseClicked(evt);
+            }
+        });
         dashboardPanel.add(depositLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
         optBgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Options to do.png"))); // NOI18N
@@ -113,38 +126,12 @@ public class UserDashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(UserDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new UserDashboard().setVisible(true);
-//            }
-//        });
-//    }
+
+    private void depositLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositLogoLabelMouseClicked
+        DepositMoney dm = new DepositMoney();
+        dm.setVisible(true);
+        dm.setUserName(getNameLabel());
+    }//GEN-LAST:event_depositLogoLabelMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accBgBalLabel;

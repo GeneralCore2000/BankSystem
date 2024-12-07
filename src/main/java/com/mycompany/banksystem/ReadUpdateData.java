@@ -1,12 +1,14 @@
 package com.mycompany.banksystem;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadUserData {
+public class ReadUpdateData {
 
     public String accountNumber;
 
@@ -18,6 +20,22 @@ public class ReadUserData {
             }
         }
         return 0.0;
+    }
+
+    public void updateBalance(String username, double newBalance) {
+        List<String[]> userList = readUserData();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt"))) {
+            for (String[] user : userList) {
+                if (user[0].equals(username)) {
+                    writer.write(user[0] + "," + user[1] + "," + user[2] + "," + newBalance);
+                } else {
+                    writer.write(String.join(",", user));
+                }
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Error updating balance.");
+        }
     }
 
     public List<String[]> readUserData() {
@@ -44,4 +62,5 @@ public class ReadUserData {
         }
         return false;
     }
+
 }

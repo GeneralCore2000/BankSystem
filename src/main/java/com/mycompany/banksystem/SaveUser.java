@@ -10,8 +10,8 @@ public class SaveUser {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt", true))) {
             writer.write(
                     fName + " " + lName + ","
-                    + accNum + ","
                     + pin + ","
+                    + accNum + ","
                     + initDep);
             writer.newLine();
         } catch (IOException e) {

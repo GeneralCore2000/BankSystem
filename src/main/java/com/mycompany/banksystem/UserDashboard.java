@@ -1,5 +1,7 @@
 package com.mycompany.banksystem;
 
+import javax.swing.JLabel;
+
 public class UserDashboard extends javax.swing.JFrame {
 
     public UserDashboard() {
@@ -7,7 +9,7 @@ public class UserDashboard extends javax.swing.JFrame {
     }
 
     public void setAccNumLabel(String accNumLabel) {
-        this.accNumLabel.setText(accNumLabel);
+        this.accNumLabel.setText("Account No.: " + accNumLabel);
     }
 
     public void setNameLabel(String nameLabel) {
@@ -17,7 +19,6 @@ public class UserDashboard extends javax.swing.JFrame {
     public void setBalLabel(String balLabel) {
         this.balLabel.setText(balLabel);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

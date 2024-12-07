@@ -50,7 +50,7 @@ public class Main extends javax.swing.JFrame {
         accNameNumField1.setBackground(new java.awt.Color(255, 255, 255));
         accNameNumField1.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         accNameNumField1.setForeground(new java.awt.Color(145, 117, 67));
-        accNameNumField1.setText("Account Name or Account Number");
+        accNameNumField1.setText("Account Name");
         accNameNumField1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(51, 51, 51)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
         accNameNumField1.setMargin(new java.awt.Insets(2, 6, 2, 9));
         accNameNumField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -112,7 +112,7 @@ public class Main extends javax.swing.JFrame {
 
     private void accNameNumField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accNameNumField1FocusGained
         // TODO add your handling code here:
-        if ("Account Name or Account Number".equals(accNameNumField1.getText())) {
+        if ("Account Name".equals(accNameNumField1.getText())) {
             accNameNumField1.setText("");
         }
     }//GEN-LAST:event_accNameNumField1FocusGained
@@ -120,7 +120,7 @@ public class Main extends javax.swing.JFrame {
     private void accNameNumField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accNameNumField1FocusLost
         // TODO add your handling code here:
         if ("".equals(accNameNumField1.getText())) {
-            accNameNumField1.setText("Account Name or Account Number");
+            accNameNumField1.setText("Account Name");
         }
 
     }//GEN-LAST:event_accNameNumField1FocusLost

@@ -6,6 +6,7 @@ public class SignUpForm extends javax.swing.JFrame {
 
     public SignUpForm() {
         initComponents();
+        generateAccountNumber();
     }
 
     @SuppressWarnings("unchecked")
@@ -16,7 +17,6 @@ public class SignUpForm extends javax.swing.JFrame {
         fNameField = new javax.swing.JTextField();
         lNameField = new javax.swing.JTextField();
         initDepField = new javax.swing.JTextField();
-        accNumField = new javax.swing.JTextField();
         pinField = new javax.swing.JTextField();
         registerButtonLabel = new javax.swing.JLabel();
         signInLabel = new javax.swing.JLabel();
@@ -63,7 +63,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 lNameFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(lNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 280, 40));
+        signUpPanel.add(lNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 280, 40));
 
         initDepField.setBackground(new java.awt.Color(255, 255, 255));
         initDepField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
@@ -79,23 +79,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 initDepFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(initDepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 280, 40));
-
-        accNumField.setBackground(new java.awt.Color(255, 255, 255));
-        accNumField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        accNumField.setForeground(new java.awt.Color(145, 117, 67));
-        accNumField.setText("Create Account Number (1-10 Digits)");
-        accNumField.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(51, 51, 51)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
-        accNumField.setMargin(new java.awt.Insets(2, 6, 2, 9));
-        accNumField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                accNumFieldFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                accNumFieldFocusLost(evt);
-            }
-        });
-        signUpPanel.add(accNumField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 280, 40));
+        signUpPanel.add(initDepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 280, 40));
 
         pinField.setBackground(new java.awt.Color(255, 255, 255));
         pinField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
@@ -111,7 +95,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 pinFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(pinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 280, 40));
+        signUpPanel.add(pinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 280, 40));
 
         registerButtonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/signup/register_button_v2.png"))); // NOI18N
         registerButtonLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,7 +103,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 registerButtonLabelMousePressed(evt);
             }
         });
-        signUpPanel.add(registerButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
+        signUpPanel.add(registerButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
 
         signInLabel.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
         signInLabel.setForeground(new java.awt.Color(255, 233, 180));
@@ -145,20 +129,6 @@ public class SignUpForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void accNumFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accNumFieldFocusGained
-        // TODO add your handling code here:
-        if ("Create Account Number (1-10 Digits)".equals(accNumField.getText())) {
-            accNumField.setText("");
-        }
-    }//GEN-LAST:event_accNumFieldFocusGained
-
-    private void accNumFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accNumFieldFocusLost
-        // TODO add your handling code here:
-        if ("".equals(accNumField.getText())) {
-            accNumField.setText("Create Account Number (1-10 Digits)");
-        }
-    }//GEN-LAST:event_accNumFieldFocusLost
 
     private void fNameFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fNameFieldFocusGained
         // TODO add your handling code here:
@@ -228,13 +198,12 @@ public class SignUpForm extends javax.swing.JFrame {
         SaveUser su = new SaveUser(
                 lNameField.getText(),
                 fNameField.getText(),
-                accNumField.getText(),
+                generateAccountNumber(),
                 Integer.parseInt(pinField.getText()),
                 Double.parseDouble(initDepField.getText())
         );
         lNameField.setText("");
         fNameField.setText("");
-        accNumField.setText("");
         pinField.setText("");
         initDepField.setText("");
         JOptionPane.showMessageDialog(null, "Successfully Registered!");
@@ -244,9 +213,12 @@ public class SignUpForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_registerButtonLabelMousePressed
 
+    public String generateAccountNumber() {
+        long accNum = (long) (1_000_000_000L + Math.random() * 9_000_000_000L);
+        return accNum + "";
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField accNumField;
     private javax.swing.JLabel background;
     private javax.swing.JTextField fNameField;
     private javax.swing.JTextField initDepField;

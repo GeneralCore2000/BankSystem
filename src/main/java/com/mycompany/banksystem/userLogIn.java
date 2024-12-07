@@ -10,12 +10,14 @@ import javax.swing.JOptionPane;
 public class userLogIn {
 
     boolean hideMain;
+    private String accountNumber;
 
     public userLogIn(String accountName, int pin) {
         if (checkCredentials(accountName, pin)) {
             UserDashboard ud = new UserDashboard();
             ud.setNameLabel(accountName);
             ud.setBalLabel(getBalance(accountName) + "");
+            ud.setAccNumLabel(accountNumber);
             JOptionPane.showMessageDialog(null, "Login successful!");
             ud.setVisible(true);
             hideMain(ud.isVisible());
@@ -43,6 +45,7 @@ public class userLogIn {
         userList = readUserData();
         for (String[] user : userList) {
             if (accountName.equals(user[0]) && Integer.parseInt(user[1]) == (pin)) {
+                accountNumber = user[2];
                 return true;
             }
         }

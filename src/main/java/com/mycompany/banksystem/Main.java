@@ -13,7 +13,7 @@ public class Main extends javax.swing.JFrame {
         logInPanel = new javax.swing.JPanel();
         pinField = new javax.swing.JTextField();
         accNameNumField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        logInButton = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         signUpLabel = new javax.swing.JLabel();
         loginBackground = new javax.swing.JLabel();
@@ -63,8 +63,13 @@ public class Main extends javax.swing.JFrame {
         });
         logInPanel.add(accNameNumField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 280, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/log_in_button.png"))); // NOI18N
-        logInPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
+        logInButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/log_in_button.png"))); // NOI18N
+        logInButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logInButtonMouseClicked(evt);
+            }
+        });
+        logInPanel.add(logInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,6 +139,14 @@ public class Main extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_signUpLabelMouseClicked
 
+    private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
+        // TODO add your handling code here:
+        userLogIn uli = new userLogIn(
+                accNameNumField1.getText(), 
+                Integer.parseInt(pinField.getText()));
+        
+    }//GEN-LAST:event_logInButtonMouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -169,7 +182,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField accNameNumField1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel logInButton;
     private javax.swing.JPanel logInPanel;
     private javax.swing.JLabel loginBackground;
     private javax.swing.JLabel logo;

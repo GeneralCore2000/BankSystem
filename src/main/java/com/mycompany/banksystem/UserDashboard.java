@@ -157,7 +157,6 @@ public class UserDashboard extends javax.swing.JFrame {
 //        setVisible(false);
         dm.setVisible(true);
         dm.setUserName(getNameLabel());
-        setTranHisTextArea();
     }//GEN-LAST:event_depositLogoLabelMouseClicked
 
     private void transferLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transferLogoLabelMouseClicked
@@ -166,7 +165,6 @@ public class UserDashboard extends javax.swing.JFrame {
 //        setVisible(false);
         tm.setVisible(true);
         tm.setUserName(getNameLabel());
-        setTranHisTextArea();
     }//GEN-LAST:event_transferLogoLabelMouseClicked
 
     private void withdrawLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawLogoLabelMouseClicked
@@ -175,7 +173,6 @@ public class UserDashboard extends javax.swing.JFrame {
 //        setVisible(false);
         wm.setVisible(true);
         wm.setUserName(getNameLabel());
-        setTranHisTextArea();
     }//GEN-LAST:event_withdrawLogoLabelMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

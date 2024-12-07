@@ -139,7 +139,6 @@ public class Main extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_signUpLabelMouseClicked
 
-
     private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
         // TODO add your handling code here:
         userLogIn uli = new userLogIn(
@@ -151,7 +150,6 @@ public class Main extends javax.swing.JFrame {
             setVisible(false);
         }
     }//GEN-LAST:event_logInButtonMouseClicked
-
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

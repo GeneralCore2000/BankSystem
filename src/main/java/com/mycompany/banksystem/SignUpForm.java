@@ -1,5 +1,7 @@
 package com.mycompany.banksystem;
 
+import javax.swing.JOptionPane;
+
 public class SignUpForm extends javax.swing.JFrame {
 
     public SignUpForm() {
@@ -13,7 +15,7 @@ public class SignUpForm extends javax.swing.JFrame {
         signUpPanel = new javax.swing.JPanel();
         fNameField = new javax.swing.JTextField();
         lNameField = new javax.swing.JTextField();
-        emailField = new javax.swing.JTextField();
+        initDepField = new javax.swing.JTextField();
         accNumField = new javax.swing.JTextField();
         pinField = new javax.swing.JTextField();
         registerButtonLabel = new javax.swing.JLabel();
@@ -63,21 +65,21 @@ public class SignUpForm extends javax.swing.JFrame {
         });
         signUpPanel.add(lNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 280, 40));
 
-        emailField.setBackground(new java.awt.Color(255, 255, 255));
-        emailField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        emailField.setForeground(new java.awt.Color(145, 117, 67));
-        emailField.setText("Email Address");
-        emailField.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(51, 51, 51)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
-        emailField.setMargin(new java.awt.Insets(2, 6, 2, 9));
-        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+        initDepField.setBackground(new java.awt.Color(255, 255, 255));
+        initDepField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        initDepField.setForeground(new java.awt.Color(145, 117, 67));
+        initDepField.setText("Initial Deposit: 100,000");
+        initDepField.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(51, 51, 51)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1)));
+        initDepField.setMargin(new java.awt.Insets(2, 6, 2, 9));
+        initDepField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                emailFieldFocusGained(evt);
+                initDepFieldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFieldFocusLost(evt);
+                initDepFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 280, 40));
+        signUpPanel.add(initDepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 280, 40));
 
         accNumField.setBackground(new java.awt.Color(255, 255, 255));
         accNumField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
@@ -93,7 +95,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 accNumFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(accNumField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 280, 40));
+        signUpPanel.add(accNumField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 280, 40));
 
         pinField.setBackground(new java.awt.Color(255, 255, 255));
         pinField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
@@ -109,9 +111,14 @@ public class SignUpForm extends javax.swing.JFrame {
                 pinFieldFocusLost(evt);
             }
         });
-        signUpPanel.add(pinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 280, 40));
+        signUpPanel.add(pinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 280, 40));
 
         registerButtonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/signup/register_button_v2.png"))); // NOI18N
+        registerButtonLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                registerButtonLabelMousePressed(evt);
+            }
+        });
         signUpPanel.add(registerButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
 
         signInLabel.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
@@ -181,19 +188,19 @@ public class SignUpForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lNameFieldFocusLost
 
-    private void emailFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusGained
+    private void initDepFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_initDepFieldFocusGained
         // TODO add your handling code here
-        if ("Email Address".equals(emailField.getText())) {
-            emailField.setText("");
+        if ("Email Address".equals(initDepField.getText())) {
+            initDepField.setText("");
         }
-    }//GEN-LAST:event_emailFieldFocusGained
+    }//GEN-LAST:event_initDepFieldFocusGained
 
-    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+    private void initDepFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_initDepFieldFocusLost
         // TODO add your handling code here:
-        if ("".equals(emailField.getText())) {
-            emailField.setText("Email Address");
+        if ("".equals(initDepField.getText())) {
+            initDepField.setText("Email Address");
         }
-    }//GEN-LAST:event_emailFieldFocusLost
+    }//GEN-LAST:event_initDepFieldFocusLost
 
     private void pinFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pinFieldFocusGained
         // TODO add your handling code here:
@@ -216,12 +223,30 @@ public class SignUpForm extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_signInLabelMouseClicked
 
+    private void registerButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerButtonLabelMousePressed
+        // TODO add your handling code here:
+        SaveUser su = new SaveUser(
+                lNameField.getText(),
+                fNameField.getText(),
+                accNumField.getText(),
+                Integer.parseInt(pinField.getText()),
+                Double.parseDouble(initDepField.getText())
+        );
+        lNameField.setText("");
+        fNameField.setText("");
+        accNumField.setText("");
+        pinField.setText("");
+        initDepField.setText("");
+        JOptionPane.showMessageDialog(null, "Successfully Registered!");
+
+    }//GEN-LAST:event_registerButtonLabelMousePressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField accNumField;
     private javax.swing.JLabel background;
-    private javax.swing.JTextField emailField;
     private javax.swing.JTextField fNameField;
+    private javax.swing.JTextField initDepField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField lNameField;
     private javax.swing.JTextField pinField;

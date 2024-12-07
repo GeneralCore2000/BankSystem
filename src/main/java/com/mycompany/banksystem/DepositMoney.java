@@ -65,14 +65,12 @@ public class DepositMoney extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void depoFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_depoFieldFocusGained
-        // TODO add your handling code here:
         if ("Amount: 100,000.00".equals(depoField.getText())) {
             depoField.setText("");
         }
     }//GEN-LAST:event_depoFieldFocusGained
 
     private void depoFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_depoFieldFocusLost
-        // TODO add your handling code here:
         if ("".equals(depoField.getText())) {
             depoField.setText("Amount: 100,000.00");
         }

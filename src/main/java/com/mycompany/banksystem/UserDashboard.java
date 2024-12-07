@@ -154,23 +154,19 @@ public class UserDashboard extends javax.swing.JFrame {
 
     private void depositLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositLogoLabelMouseClicked
         DepositMoney dm = new DepositMoney();
-//        setVisible(false);
         dm.setVisible(true);
         dm.setUserName(getNameLabel());
     }//GEN-LAST:event_depositLogoLabelMouseClicked
 
     private void transferLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transferLogoLabelMouseClicked
-        // TODO add your handling code here:
         TransferMoney tm = new TransferMoney();
-//        setVisible(false);
         tm.setVisible(true);
         tm.setUserName(getNameLabel());
     }//GEN-LAST:event_transferLogoLabelMouseClicked
 
     private void withdrawLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawLogoLabelMouseClicked
-        // TODO add your handling code here:
+
         WithdrawMoney wm = new WithdrawMoney();
-//        setVisible(false);
         wm.setVisible(true);
         wm.setUserName(getNameLabel());
     }//GEN-LAST:event_withdrawLogoLabelMouseClicked

@@ -7,9 +7,10 @@
 
 ## CLI Bank System Requirements:
 - [x] Create Bank Account
-- [x] Save Accounts to Files
 - [x] Check balance
-- [ ] Deposit
-- [ ] Withdraw
-- [ ] Transfer money
+- [x] Deposit
+- [x] Withdraw
+- [x] Transfer money
+- [ ] Receipt
+- [ ] Transaction History
       

@@ -9,22 +9,22 @@ import javax.swing.JOptionPane;
 
 public class userLogIn {
 
+    boolean hideMain;
+
     public userLogIn(String accountName, int pin) {
-        System.out.println(checkCredentials(accountName, pin));
         if (checkCredentials(accountName, pin)) {
             UserDashboard ud = new UserDashboard();
             ud.setNameLabel(accountName);
             ud.setBalLabel(getBalance(accountName) + "");
             JOptionPane.showMessageDialog(null, "Login successful!");
-            Main m = new Main();
-            m.setVisible(false);
             ud.setVisible(true);
+            hideMain(ud.isVisible());
+
         } else {
-            JOptionPane.showMessageDialog(null, accountName + " " + pin + " " +
-                    "Invalid username or password. Please try again.",
+            JOptionPane.showMessageDialog(null, accountName + " " + pin + " "
+                    + "Invalid username or password. Please try again.",
                     "Wrong Credentials!",
                     JOptionPane.ERROR_MESSAGE);
-            System.out.println("Invalid username or password. Please try again.");
         }
     }
 
@@ -32,7 +32,7 @@ public class userLogIn {
         List<String[]> userList = readUserData();
         for (String[] user : userList) {
             if (user[0].equals(username)) {
-                return Double.parseDouble(user[2]);
+                return Double.parseDouble(user[3]);
             }
         }
         return 0.0;
@@ -42,8 +42,6 @@ public class userLogIn {
         List<String[]> userList;
         userList = readUserData();
         for (String[] user : userList) {
-            System.out.println(user[0] + "//" + accountName);
-            System.out.println(user[1] + "//" + pin);
             if (accountName.equals(user[0]) && Integer.parseInt(user[1]) == (pin)) {
                 return true;
             }
@@ -64,4 +62,7 @@ public class userLogIn {
         return userList;
     }
 
+    public void hideMain(boolean isVisible) {
+        hideMain = isVisible;
+    }
 }

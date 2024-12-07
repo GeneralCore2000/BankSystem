@@ -58,6 +58,7 @@ public class WithdrawMoney extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 400));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void withdrawFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_withdrawFieldFocusGained
@@ -84,6 +85,12 @@ public class WithdrawMoney extends javax.swing.JFrame {
         }
         ReadUpdateData rud = new ReadUpdateData();
         rud.updateBalance(userName, rud.getBalance(userName) - Double.parseDouble(withdrawField.getText()));
+        UserDashboard ud = new UserDashboard();
+        ud.setNameLabel(userName);
+        ud.setBalLabel(rud.getBalance(userName) + "");
+        ud.setAccNumLabel(rud.getAccNumber(userName));
+        ud.setVisible(true);
+        dispose();
     }//GEN-LAST:event_withdrawButtonMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

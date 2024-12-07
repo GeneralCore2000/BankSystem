@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 public class ReadUpdateData {
 
@@ -63,5 +62,14 @@ public class ReadUpdateData {
         }
         return false;
     }
-
+    public String getAccNumber(String accountName) {
+        List<String[]> userList;
+        userList = readUserData();
+        for (String[] user : userList) {
+            if (accountName.equals(user[0])) {
+                return accountNumber = user[2];
+            }
+        }
+        return null;
+    }
 }

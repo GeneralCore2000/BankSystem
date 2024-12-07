@@ -1,19 +1,20 @@
 package com.mycompany.banksystem;
 
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class DepositMoney extends javax.swing.JFrame {
-    
+
     private String userName;
-    
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
-    
+
     public DepositMoney() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -85,8 +86,15 @@ public class DepositMoney extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
+        
         ReadUpdateData rud = new ReadUpdateData();
         rud.updateBalance(userName, Double.parseDouble(depoField.getText()) + rud.getBalance(userName));
+        UserDashboard ud = new UserDashboard();
+        ud.setNameLabel(userName);
+        ud.setBalLabel(rud.getBalance(userName) + "");
+        ud.setAccNumLabel(rud.getAccNumber(userName));
+        ud.setVisible(true);
+        dispose();
     }//GEN-LAST:event_depoButtonMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

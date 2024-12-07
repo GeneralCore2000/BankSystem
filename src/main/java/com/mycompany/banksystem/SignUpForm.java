@@ -190,7 +190,7 @@ public class SignUpForm extends javax.swing.JFrame {
 
     private void initDepFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_initDepFieldFocusGained
         // TODO add your handling code here
-        if ("Email Address".equals(initDepField.getText())) {
+        if ("Initial Deposit: 100,000".equals(initDepField.getText())) {
             initDepField.setText("");
         }
     }//GEN-LAST:event_initDepFieldFocusGained
@@ -198,7 +198,7 @@ public class SignUpForm extends javax.swing.JFrame {
     private void initDepFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_initDepFieldFocusLost
         // TODO add your handling code here:
         if ("".equals(initDepField.getText())) {
-            initDepField.setText("Email Address");
+            initDepField.setText("Initial Deposit: 100,000");
         }
     }//GEN-LAST:event_initDepFieldFocusLost
 
@@ -238,6 +238,9 @@ public class SignUpForm extends javax.swing.JFrame {
         pinField.setText("");
         initDepField.setText("");
         JOptionPane.showMessageDialog(null, "Successfully Registered!");
+        Main main = new Main();
+        main.setVisible(true);
+        setVisible(false);
 
     }//GEN-LAST:event_registerButtonLabelMousePressed
 

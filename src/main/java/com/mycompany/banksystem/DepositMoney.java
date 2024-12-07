@@ -3,22 +3,17 @@ package com.mycompany.banksystem;
 import javax.swing.JOptionPane;
 
 public class DepositMoney extends javax.swing.JFrame {
-
-    private double userBalance;
+    
     private String userName;
-
-    public void setUserBalance(double userBalance) {
-        this.userBalance = userBalance;
-    }
-
+    
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    
     public DepositMoney() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -29,7 +24,6 @@ public class DepositMoney extends javax.swing.JFrame {
         depoField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setAutoRequestFocus(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -84,19 +78,16 @@ public class DepositMoney extends javax.swing.JFrame {
     }//GEN-LAST:event_depoFieldFocusLost
 
     private void depoButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depoButtonMouseClicked
-        ReadUpdateData rud = new ReadUpdateData();
-        UserDashboard ud = new UserDashboard();
         if (Integer.parseInt(depoField.getText()) <= 0) {
             JOptionPane.showMessageDialog(null,
                     "Deposit amount must be greater than zero.",
                     "Deposit Error",
                     JOptionPane.ERROR_MESSAGE);
-
-        } else {
-            rud.updateBalance(userName, (userBalance + Double.parseDouble(depoField.getText())));
-            dispose();
+            return;
         }
-
+        ReadUpdateData rud = new ReadUpdateData();
+        UserDashboard ud = new UserDashboard();
+        rud.updateBalance(userName, Double.parseDouble(depoField.getText()) + rud.getBalance(userName));
     }//GEN-LAST:event_depoButtonMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,5 +1,7 @@
 package com.mycompany.banksystem;
 
+import javax.swing.JLabel;
+
 public class UserDashboard extends javax.swing.JFrame {
 
     public UserDashboard() {
@@ -14,8 +16,16 @@ public class UserDashboard extends javax.swing.JFrame {
         this.nameLabel.setText(nameLabel);
     }
 
+    public String getNameLabel() {
+        return nameLabel.getText();
+    }
+
     public void setBalLabel(String balLabel) {
         this.balLabel.setText(balLabel);
+    }
+
+    public double getBalLabel() {
+        return Double.parseDouble(balLabel.getText());
     }
 
     @SuppressWarnings("unchecked")
@@ -118,7 +128,9 @@ public class UserDashboard extends javax.swing.JFrame {
 
 
     private void depositLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositLogoLabelMouseClicked
-       
+        DepositMoney dm = new DepositMoney();
+        dm.setVisible(true);
+        dm.setUserName(getNameLabel());
     }//GEN-LAST:event_depositLogoLabelMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

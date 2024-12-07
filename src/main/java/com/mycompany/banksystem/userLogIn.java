@@ -17,6 +17,7 @@ public final class userLogIn extends ReadUpdateData {
             JOptionPane.showMessageDialog(null, "Login successfully!");
             ud.setVisible(true);
             hideMain(ud.isVisible());
+
         } else {
             JOptionPane.showMessageDialog(null, 
                     "Invalid username or password. Please try again.",

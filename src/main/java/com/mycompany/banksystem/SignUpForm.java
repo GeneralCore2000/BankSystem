@@ -226,11 +226,11 @@ public class SignUpForm extends javax.swing.JFrame {
     private void registerButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerButtonLabelMousePressed
         // TODO add your handling code here:
         SaveUser su = new SaveUser(
-                fNameField.getText(),
                 lNameField.getText(),
+                fNameField.getText(),
                 accNumField.getText(),
-                Double.parseDouble(initDepField.getText()),
-                Integer.parseInt(pinField.getText())
+                Integer.parseInt(pinField.getText()),
+                Double.parseDouble(initDepField.getText())
         );
         lNameField.setText("");
         fNameField.setText("");

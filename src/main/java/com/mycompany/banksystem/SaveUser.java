@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class SaveUser {
 
-    public SaveUser(String fName, String lName, String accNum, double initDep, int pin) {
+    public SaveUser(String fName, String lName, String accNum, int pin, double initDep) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt", true))) {
             writer.write(
                     fName + " " + lName + ","

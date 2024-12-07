@@ -11,6 +11,6 @@
 - [x] Deposit
 - [x] Withdraw
 - [x] Transfer money
-- [ ] Receipt
-- [ ] Transaction History
+- [x] Receipt
+- [x] Transaction History
       

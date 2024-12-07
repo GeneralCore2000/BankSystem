@@ -6,9 +6,9 @@
 **Deadline**: 12/09/2024
 
 ## CLI Bank System Requirements:
-- [ ] Create Bank Account
-- [ ] Save Accounts to Files
-- [ ] Check balance
+- [x] Create Bank Account
+- [x] Save Accounts to Files
+- [x] Check balance
 - [ ] Deposit
 - [ ] Withdraw
 - [ ] Transfer money

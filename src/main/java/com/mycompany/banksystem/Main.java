@@ -134,6 +134,20 @@ public class Main extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_signUpLabelMouseClicked
 
+
+    private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
+        // TODO add your handling code here:
+        userLogIn uli = new userLogIn(
+                accNameNumField1.getText(),
+                Integer.parseInt(pinField.getText()));
+        if(uli.hideMain){
+            accNameNumField1.setText("");
+            pinField.setText("");
+            setVisible(false);
+        }
+    }//GEN-LAST:event_logInButtonMouseClicked
+
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

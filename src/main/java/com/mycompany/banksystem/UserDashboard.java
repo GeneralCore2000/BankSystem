@@ -6,6 +6,21 @@ public class UserDashboard extends javax.swing.JFrame {
         initComponents();
     }
 
+
+    public void setAccNumLabel(String accNumLabel) {
+        this.accNumLabel.setText(accNumLabel);
+    }
+
+    public void setNameLabel(String nameLabel) {
+        this.nameLabel.setText(nameLabel);
+    }
+
+    public void setBalLabel(String balLabel) {
+        this.balLabel.setText(balLabel);
+    }
+
+
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -16,7 +31,11 @@ public class UserDashboard extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tranHisTextArea = new javax.swing.JTextArea();
         accNumLabel = new javax.swing.JLabel();
+<<<<<<< HEAD
         phpLabel1 = new javax.swing.JLabel();
+=======
+        balLabel = new javax.swing.JLabel();
+>>>>>>> 55bce9882fff58799864d4bad50dd338ab33c04f
         phpLabel = new javax.swing.JLabel();
         availBalLabel = new javax.swing.JLabel();
         accBgBalLabel = new javax.swing.JLabel();
@@ -27,6 +46,10 @@ public class UserDashboard extends javax.swing.JFrame {
         bgLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
+=======
+        setResizable(false);
+>>>>>>> 55bce9882fff58799864d4bad50dd338ab33c04f
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dashboardPanel.setBackground(new java.awt.Color(255, 229, 166));
@@ -59,10 +82,17 @@ public class UserDashboard extends javax.swing.JFrame {
         accNumLabel.setText("Account No.: {10-Digits account number}");
         dashboardPanel.add(accNumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
+<<<<<<< HEAD
         phpLabel1.setFont(new java.awt.Font("SansSerif", 1, 43)); // NOI18N
         phpLabel1.setForeground(new java.awt.Color(255, 255, 255));
         phpLabel1.setText("12345.00");
         dashboardPanel.add(phpLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
+=======
+        balLabel.setFont(new java.awt.Font("SansSerif", 1, 43)); // NOI18N
+        balLabel.setForeground(new java.awt.Color(255, 255, 255));
+        balLabel.setText("12345.00");
+        dashboardPanel.add(balLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
+>>>>>>> 55bce9882fff58799864d4bad50dd338ab33c04f
 
         phpLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         phpLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,6 +125,7 @@ public class UserDashboard extends javax.swing.JFrame {
         getContentPane().add(dashboardPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 570));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 //    public static void main(String args[]) {
@@ -134,6 +165,10 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel accBgBalLabel;
     private javax.swing.JLabel accNumLabel;
     private javax.swing.JLabel availBalLabel;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel balLabel;
+>>>>>>> 55bce9882fff58799864d4bad50dd338ab33c04f
     private javax.swing.JLabel bgLogo;
     private javax.swing.JPanel dashboardPanel;
     private javax.swing.JLabel depositLogoLabel;
@@ -142,7 +177,10 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel optBgLabel;
     private javax.swing.JLabel phpLabel;
+<<<<<<< HEAD
     private javax.swing.JLabel phpLabel1;
+=======
+>>>>>>> 55bce9882fff58799864d4bad50dd338ab33c04f
     private javax.swing.JTextArea tranHisTextArea;
     private javax.swing.JLabel transferLogoLabel;
     private javax.swing.JLabel withdrawLogoLabel;

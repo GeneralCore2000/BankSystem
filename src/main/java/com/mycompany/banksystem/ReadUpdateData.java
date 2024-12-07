@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 public class ReadUpdateData {
@@ -45,7 +46,7 @@ public class ReadUpdateData {
                 writer.newLine();
             }
         } catch (IOException e) {
-            System.out.println("Error updating balance.");
+            JOptionPane.showMessageDialog(null, "Error updating balance." + e, "IOException", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -55,7 +56,7 @@ public class ReadUpdateData {
         ud.setBalLabel(getBalance(userName) + "");
         ud.setAccNumLabel(getAccNumber(userName));
         ud.setVisible(true);
-        Timer timer = new Timer(1500, e -> {
+        Timer timer = new Timer(500, e -> {
             ud.setTranHisTextArea();
         });
         timer.setRepeats(false);
@@ -70,7 +71,7 @@ public class ReadUpdateData {
                 userList.add(line.split(","));
             }
         } catch (IOException e) {
-            System.out.println("Error reading user data.");
+            JOptionPane.showMessageDialog(null, "Error reading user data." + e, "IOException", JOptionPane.ERROR_MESSAGE);
         }
         return userList;
     }

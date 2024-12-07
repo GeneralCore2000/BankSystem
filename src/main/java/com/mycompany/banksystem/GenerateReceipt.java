@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 public class GenerateReceipt {
 
@@ -25,7 +26,7 @@ public class GenerateReceipt {
             writer.write("============================");
             writer.newLine();
         } catch (IOException e) {
-            System.out.println("Error saving receipt.");
+            JOptionPane.showMessageDialog(null, "Error saving receipt." + e, "IOException", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

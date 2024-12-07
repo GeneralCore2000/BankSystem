@@ -36,6 +36,10 @@ public final class userLogIn extends ReadUpdateData {
                 System.out.println(reader);
             }
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, 
+                    "Error printing Transaction History." + e, 
+                    "IOException", 
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 

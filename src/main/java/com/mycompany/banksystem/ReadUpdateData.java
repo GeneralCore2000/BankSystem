@@ -15,18 +15,28 @@ public class ReadUpdateData {
     public double getBalance(String username) {
         List<String[]> userList = readUserData();
         for (String[] user : userList) {
-            if (user[0].equals(username)) {
+            if (user[0].equals(username) || user[2].equals(username)) {
                 return Double.parseDouble(user[3]);
             }
         }
         return 0.0;
     }
 
+    public boolean userExists(String username) {
+        List<String[]> userList = readUserData();
+        for (String[] user : userList) {
+            if (user[0].equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void updateBalance(String username, double newBalance) {
         List<String[]> userList = readUserData();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt"))) {
             for (String[] user : userList) {
-                if (user[0].equals(username)) {
+                if (user[0].equals(username) || user[2].equals(username)) {
                     writer.write(user[0] + "," + user[1] + "," + user[2] + "," + newBalance);
                 } else {
                     writer.write(String.join(",", user));
@@ -36,6 +46,14 @@ public class ReadUpdateData {
         } catch (IOException e) {
             System.out.println("Error updating balance.");
         }
+    }
+
+    public void updateLabel(String userName) {
+        UserDashboard ud = new UserDashboard();
+        ud.setNameLabel(userName);
+        ud.setBalLabel(getBalance(userName) + "");
+        ud.setAccNumLabel(getAccNumber(userName));
+        ud.setVisible(true);
     }
 
     public List<String[]> readUserData() {
@@ -62,6 +80,7 @@ public class ReadUpdateData {
         }
         return false;
     }
+
     public String getAccNumber(String accountName) {
         List<String[]> userList;
         userList = readUserData();

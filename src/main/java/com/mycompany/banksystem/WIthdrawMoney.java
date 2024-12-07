@@ -85,11 +85,7 @@ public class WithdrawMoney extends javax.swing.JFrame {
         }
         ReadUpdateData rud = new ReadUpdateData();
         rud.updateBalance(userName, rud.getBalance(userName) - Double.parseDouble(withdrawField.getText()));
-        UserDashboard ud = new UserDashboard();
-        ud.setNameLabel(userName);
-        ud.setBalLabel(rud.getBalance(userName) + "");
-        ud.setAccNumLabel(rud.getAccNumber(userName));
-        ud.setVisible(true);
+        rud.updateLabel(userName);
         dispose();
     }//GEN-LAST:event_withdrawButtonMouseClicked
 

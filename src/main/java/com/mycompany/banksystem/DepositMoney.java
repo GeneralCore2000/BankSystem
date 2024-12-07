@@ -86,14 +86,10 @@ public class DepositMoney extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
+
         ReadUpdateData rud = new ReadUpdateData();
         rud.updateBalance(userName, Double.parseDouble(depoField.getText()) + rud.getBalance(userName));
-        UserDashboard ud = new UserDashboard();
-        ud.setNameLabel(userName);
-        ud.setBalLabel(rud.getBalance(userName) + "");
-        ud.setAccNumLabel(rud.getAccNumber(userName));
-        ud.setVisible(true);
+        rud.updateLabel(userName);
         dispose();
     }//GEN-LAST:event_depoButtonMouseClicked
 

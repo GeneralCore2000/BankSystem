@@ -1,0 +1,40 @@
+Transaction: Deposit
+Amount: 300.00
+New Balance: 600.0
+Date: Sun Dec 08 05:59:56 PST 2024
+============================
+Transaction: Deposit
+Amount: 100.00
+New Balance: 700.0
+Date: Sun Dec 08 06:02:46 PST 2024
+============================
+Transaction: Deposit
+Amount: 1.00
+New Balance: 701.0
+Date: Sun Dec 08 06:03:01 PST 2024
+============================
+Transaction: Deposit
+Amount: 1.00
+New Balance: 702.0
+Date: Sun Dec 08 06:03:05 PST 2024
+============================
+Transaction: Transfer Money
+Sent to: 12Amount: 12.00
+New Balance: 690.0
+Date: Sun Dec 08 06:03:10 PST 2024
+============================
+Transaction: Deposit
+Amount: 100.00
+New Balance: 790.0
+Date: Sun Dec 08 06:04:02 PST 2024
+============================
+Transaction: Deposit
+Amount: 100.00
+New Balance: 890.0
+Date: Sun Dec 08 06:04:15 PST 2024
+============================
+Transaction: Withdraw
+Amount: 890.00
+New Balance: 0.0
+Date: Sun Dec 08 06:04:26 PST 2024
+============================

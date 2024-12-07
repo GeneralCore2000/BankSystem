@@ -23,6 +23,7 @@ public class WithdrawMoney extends javax.swing.JFrame {
         withdrawField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(54, 75, 104));
@@ -84,8 +85,14 @@ public class WithdrawMoney extends javax.swing.JFrame {
             return;
         }
         ReadUpdateData rud = new ReadUpdateData();
-        rud.updateBalance(userName, rud.getBalance(userName) - Double.parseDouble(withdrawField.getText()));
+        double newBalance = rud.getBalance(userName) - Double.parseDouble(withdrawField.getText());
+        rud.updateBalance(userName, newBalance);
         rud.updateLabel(userName);
+        GenerateReceipt gr = new GenerateReceipt(
+                "Withdraw",
+                Double.parseDouble(withdrawField.getText()),
+                "New Balance: " + newBalance,
+                "", userName);
         dispose();
     }//GEN-LAST:event_withdrawButtonMouseClicked
 

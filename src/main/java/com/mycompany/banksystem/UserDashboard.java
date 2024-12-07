@@ -1,11 +1,27 @@
 package com.mycompany.banksystem;
 
-import javax.swing.JLabel;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class UserDashboard extends javax.swing.JFrame {
 
     public UserDashboard() {
         initComponents();
+    }
+
+    public void setTranHisTextArea() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(getNameLabel() + "_receipts.txt"));
+            String reader;
+            while ((reader = br.readLine()) != null) {
+                tranHisTextArea.append(reader + "\n");
+                System.out.println(reader + "\n");
+            }
+            br.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
     public void setAccNumLabel(String accNumLabel) {
@@ -138,26 +154,28 @@ public class UserDashboard extends javax.swing.JFrame {
 
     private void depositLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depositLogoLabelMouseClicked
         DepositMoney dm = new DepositMoney();
-        setVisible(false);
+//        setVisible(false);
         dm.setVisible(true);
         dm.setUserName(getNameLabel());
+        setTranHisTextArea();
     }//GEN-LAST:event_depositLogoLabelMouseClicked
 
     private void transferLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transferLogoLabelMouseClicked
         // TODO add your handling code here:
         TransferMoney tm = new TransferMoney();
-        setVisible(false);
+//        setVisible(false);
         tm.setVisible(true);
         tm.setUserName(getNameLabel());
+        setTranHisTextArea();
     }//GEN-LAST:event_transferLogoLabelMouseClicked
 
     private void withdrawLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_withdrawLogoLabelMouseClicked
         // TODO add your handling code here:
         WithdrawMoney wm = new WithdrawMoney();
-        setVisible(false);
+//        setVisible(false);
         wm.setVisible(true);
         wm.setUserName(getNameLabel());
-
+        setTranHisTextArea();
     }//GEN-LAST:event_withdrawLogoLabelMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

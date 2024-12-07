@@ -1,6 +1,5 @@
 package com.mycompany.banksystem;
 
-import java.util.List;
 import javax.swing.JOptionPane;
 
 public class DepositMoney extends javax.swing.JFrame {
@@ -26,6 +25,7 @@ public class DepositMoney extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         depositPanel.setBackground(new java.awt.Color(54, 75, 104));
@@ -86,10 +86,15 @@ public class DepositMoney extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-
         ReadUpdateData rud = new ReadUpdateData();
-        rud.updateBalance(userName, Double.parseDouble(depoField.getText()) + rud.getBalance(userName));
+        double newBalance = Double.parseDouble(depoField.getText()) + rud.getBalance(userName);
+        rud.updateBalance(userName, newBalance);
         rud.updateLabel(userName);
+        GenerateReceipt gr = new GenerateReceipt(
+                "Deposit",
+                Double.parseDouble(depoField.getText()),
+                "New Balance: " + newBalance,
+                "", userName);
         dispose();
     }//GEN-LAST:event_depoButtonMouseClicked
 

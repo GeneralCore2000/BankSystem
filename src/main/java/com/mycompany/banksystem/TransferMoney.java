@@ -3,17 +3,17 @@ package com.mycompany.banksystem;
 import javax.swing.JOptionPane;
 
 public class TransferMoney extends javax.swing.JFrame {
-    
+
     private String userName;
-    
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
-    
+
     public TransferMoney() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -52,7 +52,7 @@ public class TransferMoney extends javax.swing.JFrame {
         });
         transPanel.add(transField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 280, 40));
 
-        transButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/Deposit/Deposit Button.png"))); // NOI18N
+        transButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/Transfer/Transfer Button.png"))); // NOI18N
         transButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 transButtonMouseClicked(evt);
@@ -110,9 +110,17 @@ public class TransferMoney extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        rud.updateBalance(userName, rud.getBalance(userName) - Double.parseDouble(transField.getText()));
-        rud.updateBalance(reciField.getText(), rud.getBalance(reciField.getText()) + Double.parseDouble(transField.getText()));
+        double newBalance = rud.getBalance(userName) - Double.parseDouble(transField.getText());
+        rud.updateBalance(userName, newBalance);
+        rud.updateBalance(
+                reciField.getText(),
+                rud.getBalance(reciField.getText()) + Double.parseDouble(transField.getText()));
         rud.updateLabel(userName);
+        GenerateReceipt gr = new GenerateReceipt(
+                "Transfer Money",
+                Double.parseDouble(transField.getText()),
+                "New Balance: " + newBalance,
+                reciField.getText(), userName);
         dispose();
     }//GEN-LAST:event_transButtonMouseClicked
 
@@ -129,41 +137,6 @@ public class TransferMoney extends javax.swing.JFrame {
             reciField.setText("Recipient's Account Number");
         }
     }//GEN-LAST:event_reciFieldFocusLost
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TransferMoney.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TransferMoney.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TransferMoney.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TransferMoney.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TransferMoney().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

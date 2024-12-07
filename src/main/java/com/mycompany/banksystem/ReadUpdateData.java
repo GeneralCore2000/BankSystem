@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.Timer;
 
 public class ReadUpdateData {
 
@@ -54,6 +55,11 @@ public class ReadUpdateData {
         ud.setBalLabel(getBalance(userName) + "");
         ud.setAccNumLabel(getAccNumber(userName));
         ud.setVisible(true);
+        Timer timer = new Timer(1500, e -> {
+            ud.setTranHisTextArea();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }
 
     public List<String[]> readUserData() {

@@ -2,7 +2,6 @@ com\mycompany\banksystem\ReadUpdateData.class
 com\mycompany\banksystem\SignUpForm$6.class
 com\mycompany\banksystem\UserDashboard.class
 com\mycompany\banksystem\DepositMoney.class
-com\mycompany\banksystem\TransferMoney$4.class
 com\mycompany\banksystem\SignUpForm.class
 com\mycompany\banksystem\UserDashboard$2.class
 com\mycompany\banksystem\Main$3.class
@@ -12,6 +11,7 @@ com\mycompany\banksystem\SignUpForm$2.class
 com\mycompany\banksystem\WithdrawMoney$2.class
 com\mycompany\banksystem\WithdrawMoney.class
 com\mycompany\banksystem\Main$4.class
+com\mycompany\banksystem\GenerateReceipt.class
 com\mycompany\banksystem\SignUpForm$4.class
 com\mycompany\banksystem\TransferMoney$2.class
 com\mycompany\banksystem\UserDashboard$1.class

@@ -3,6 +3,7 @@ package com.mycompany.banksystem;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 public class UserDashboard extends javax.swing.JFrame {
 
@@ -49,6 +50,7 @@ public class UserDashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         dashboardPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -65,11 +67,21 @@ public class UserDashboard extends javax.swing.JFrame {
         bgLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dashboardPanel.setBackground(new java.awt.Color(255, 229, 166));
         dashboardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(54, 75, 104));
+        jLabel1.setForeground(new java.awt.Color(54, 75, 104));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/dashboard/Logout.png"))); // NOI18N
+        jLabel1.setText("Log Out");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        dashboardPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 20, -1, -1));
 
         nameLabel.setBackground(new java.awt.Color(54, 75, 104));
         nameLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -173,6 +185,19 @@ public class UserDashboard extends javax.swing.JFrame {
         wm.setUserName(getNameLabel());
     }//GEN-LAST:event_withdrawLogoLabelMouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        int logout = JOptionPane.showConfirmDialog(rootPane,
+                "Log Out now?",
+                "Logging Out",
+                JOptionPane.OK_CANCEL_OPTION);
+        if (logout == JOptionPane.OK_OPTION) {
+            dispose();
+            Main m = new Main();
+            m.setVisible(true);
+        }
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accBgBalLabel;
     private javax.swing.JLabel accNumLabel;
@@ -181,6 +206,7 @@ public class UserDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel bgLogo;
     private javax.swing.JPanel dashboardPanel;
     private javax.swing.JLabel depositLogoLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel nameLabel;

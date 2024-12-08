@@ -1,0 +1,20 @@
+Transaction: Deposit
+Amount: 1.00
+New Balance: 101.0
+Date: Mon Dec 09 04:03:55 PST 2024
+============================
+Transaction: Transfer Money
+Sent to: 1221Amount: 1212.00
+New Balance: -1111.0
+Date: Mon Dec 09 04:04:02 PST 2024
+============================
+Transaction: Withdraw
+Amount: 1212.00
+New Balance: -2323.0
+Date: Mon Dec 09 04:04:07 PST 2024
+============================
+Transaction: Deposit
+Amount: 2323.00
+New Balance: 0.0
+Date: Mon Dec 09 04:04:10 PST 2024
+============================

@@ -71,7 +71,7 @@ public class ReadUpdateData {
                 userList.add(line.split(","));
             }
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error reading user data." + e, "IOException", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null, "Error reading user data." + e, "IOException", JOptionPane.ERROR_MESSAGE);
         }
         return userList;
     }

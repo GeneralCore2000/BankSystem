@@ -93,3 +93,23 @@ Amount: 2343.00
 New Balance: 2472.0
 Date: Sun Dec 08 06:39:44 PST 2024
 ============================
+Transaction: Deposit
+Amount: 1.00
+New Balance: 2473.0
+Date: Mon Dec 09 02:12:05 PST 2024
+============================
+Transaction: Transfer Money
+Sent to: 7225414848Amount: 1.00
+New Balance: 2472.0
+Date: Mon Dec 09 02:12:16 PST 2024
+============================
+Transaction: Withdraw
+Amount: 2.00
+New Balance: 2470.0
+Date: Mon Dec 09 02:12:43 PST 2024
+============================
+Transaction: Withdraw
+Amount: 3680.00
+New Balance: 0.0
+Date: Mon Dec 09 02:14:04 PST 2024
+============================

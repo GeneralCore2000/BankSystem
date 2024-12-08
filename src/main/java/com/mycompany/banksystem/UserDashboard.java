@@ -99,6 +99,7 @@ public class UserDashboard extends javax.swing.JFrame {
         tranHisTextArea.setEditable(false);
         tranHisTextArea.setBackground(new java.awt.Color(255, 255, 255));
         tranHisTextArea.setColumns(20);
+        tranHisTextArea.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         tranHisTextArea.setRows(5);
         tranHisTextArea.setFocusable(false);
         jScrollPane1.setViewportView(tranHisTextArea);

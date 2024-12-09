@@ -26,6 +26,7 @@ com\mycompany\banksystem\Main$5.class
 com\mycompany\banksystem\DepositMoney$2.class
 com\mycompany\banksystem\UserDashboard$4.class
 com\mycompany\banksystem\GroupMembers.class
+com\mycompany\banksystem\CLIMain.class
 com\mycompany\banksystem\MoneyConfirmation.class
 com\mycompany\banksystem\UserLogIn.class
 com\mycompany\banksystem\Main$1.class

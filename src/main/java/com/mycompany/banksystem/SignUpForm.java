@@ -29,6 +29,7 @@ public class SignUpForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Group 3 Bank System");
+        setAlwaysOnTop(true);
         setAutoRequestFocus(false);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -209,7 +210,7 @@ public class SignUpForm extends javax.swing.JFrame {
         fNameField.setText("");
         pinField.setText("");
         initDepField.setText("");
-        JOptionPane.showMessageDialog(null, "Successfully Registered!");
+        JOptionPane.showMessageDialog(rootPane, "Successfully Registered!");
         Main main = new Main();
         main.setVisible(true);
         setVisible(false);
@@ -218,7 +219,7 @@ public class SignUpForm extends javax.swing.JFrame {
     public void SaveUser(String fName, String lName, String accNum, int pin, double initDep) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("useraccount.txt", true))) {
             writer.write(
-                    fName + " " + lName + ","
+                    lName + " " + fName + ","
                     + pin + ","
                     + accNum + ","
                     + initDep);

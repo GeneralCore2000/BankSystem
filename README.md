@@ -5,7 +5,7 @@
 
 **Deadline**: 12/09/2024
 
-## CLI Bank System Requirements:
+## CLI/GUI Bank System Requirements:
 - [x] Create Bank Account
 - [x] Check balance
 - [x] Deposit
@@ -13,4 +13,5 @@
 - [x] Transfer money
 - [x] Receipt
 - [x] Transaction History
-      
+
+Netbeans Version: 23

@@ -11,15 +11,15 @@ public class GroupMembers extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        vargasName = new javax.swing.JLabel();
+        leader = new javax.swing.JLabel();
+        members = new javax.swing.JLabel();
+        censonName = new javax.swing.JLabel();
+        telishaName = new javax.swing.JLabel();
+        sideRibbon = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        x = new javax.swing.JLabel();
+        githubLink = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Group 3 Bank System");
@@ -30,56 +30,56 @@ public class GroupMembers extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 62, 87));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("VARGAS, John Lloyd E.");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 170, 30));
+        vargasName.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        vargasName.setForeground(new java.awt.Color(255, 255, 255));
+        vargasName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        vargasName.setText("VARGAS, John Lloyd E.");
+        jPanel1.add(vargasName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 170, 30));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 229, 166));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("LEADER");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 50, 30));
+        leader.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        leader.setForeground(new java.awt.Color(255, 229, 166));
+        leader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        leader.setText("LEADER");
+        jPanel1.add(leader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 50, 30));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 229, 166));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("MEMBERS");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 70, 20));
+        members.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        members.setForeground(new java.awt.Color(255, 229, 166));
+        members.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        members.setText("MEMBERS");
+        jPanel1.add(members, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 70, 20));
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("CENSON, Azzy Rain V.");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 170, 20));
+        censonName.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        censonName.setForeground(new java.awt.Color(255, 255, 255));
+        censonName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        censonName.setText("CENSON, Azzy Rain V.");
+        jPanel1.add(censonName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 170, 20));
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("DELA CRUZ, Telisha Simone N.");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 230, 33));
+        telishaName.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        telishaName.setForeground(new java.awt.Color(255, 255, 255));
+        telishaName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        telishaName.setText("DELA CRUZ, Telisha Simone N.");
+        jPanel1.add(telishaName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 230, 33));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/MemberPanel/Frame 5.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        sideRibbon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/MemberPanel/Frame 5.png"))); // NOI18N
+        jPanel1.add(sideRibbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/MemberPanel/Logo 2 1.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 190, 130));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/MemberPanel/Logo 2 1.png"))); // NOI18N
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 190, 130));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 233, 180));
-        jLabel2.setText("X");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        x.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        x.setForeground(new java.awt.Color(255, 233, 180));
+        x.setText("X");
+        x.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                xMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, 20));
+        jPanel1.add(x, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, 20));
 
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("https://github.com/GeneralCore2000/BankSystem");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, -1, -1));
+        githubLink.setBackground(new java.awt.Color(0, 0, 0));
+        githubLink.setForeground(new java.awt.Color(255, 255, 255));
+        githubLink.setText("https://github.com/GeneralCore2000/BankSystem");
+        jPanel1.add(githubLink, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
 
@@ -87,21 +87,21 @@ public class GroupMembers extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void xMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xMouseClicked
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_jLabel2MouseClicked
+    }//GEN-LAST:event_xMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel censonName;
+    private javax.swing.JLabel githubLink;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel leader;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel members;
+    private javax.swing.JLabel sideRibbon;
+    private javax.swing.JLabel telishaName;
+    private javax.swing.JLabel vargasName;
+    private javax.swing.JLabel x;
     // End of variables declaration//GEN-END:variables
 }

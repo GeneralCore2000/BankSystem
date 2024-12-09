@@ -4,6 +4,7 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        System.out.println("hello");
     }
 
     @SuppressWarnings("unchecked")
@@ -144,7 +145,7 @@ public class Main extends javax.swing.JFrame {
         UserLogIn uli = new UserLogIn(
                 accNameNumField1.getText(),
                 Integer.parseInt(pinField.getText()));
-        if(uli.hideMain){
+        if (uli.hideMain) {
             accNameNumField1.setText("");
             pinField.setText("");
             setVisible(false);
